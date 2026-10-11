@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>데이터 엔지니어 이재웅</title>
+<link rel="stylesheet" href="vendor/pdfjs/web/pdf_viewer.css">
+<style>
+:root{color-scheme:light;--ink:#202b3c;--muted:#586577;--line:#d5dce5;--accent:#254c83}
+*{box-sizing:border-box}body{margin:0;color:var(--ink);background:#edf0f4;font-family:"Apple SD Gothic Neo","Malgun Gothic",sans-serif}.shell{height:100dvh;display:flex;flex-direction:column}header{background:white;border-bottom:1px solid var(--line)}.header-inner{max-width:1240px;margin:auto;padding:22px 32px;display:flex;align-items:center;justify-content:space-between;gap:20px}h1{margin:0;font-size:21px;letter-spacing:-.6px}h1 span{margin-left:12px;color:var(--muted);font-size:14px;font-weight:400;letter-spacing:0}.skills{margin:7px 0 0;color:var(--muted);font-size:12px;line-height:1.6}nav,.tools,.zoom{display:flex;align-items:center;gap:8px}.action,button{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:0 15px;border:1px solid var(--line);border-radius:7px;background:white;color:var(--ink);font:inherit;font-size:13px;text-decoration:none;cursor:pointer}.primary{background:var(--accent);border-color:var(--accent);color:white}button:hover:not(:disabled),.action:hover{filter:brightness(.96)}:focus-visible{outline:3px solid #628ec6;outline-offset:3px}button:disabled{opacity:.4;cursor:default}.toolbar{padding:10px 32px;max-width:1240px;width:100%;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}.document-label{font-size:13px;color:var(--muted)}.document-label strong{color:var(--ink);font-weight:600;margin-right:10px}.zoom{gap:0;border:1px solid var(--line);border-radius:7px;background:white}.zoom button{width:44px;padding:0;border:0;background:transparent;font-size:20px}#scale{width:56px;text-align:center;font-size:12px;font-variant-numeric:tabular-nums}main{position:relative;flex:1;min-height:0}#viewerContainer{position:absolute;inset:0;max-width:1240px;margin:0 auto;overflow:auto;overscroll-behavior:contain}.pdfViewer{padding:8px 16px 40px;--page-margin:0 auto 20px;--page-border:none}.pdfViewer .page{box-sizing:content-box;border:0;box-shadow:0 3px 18px #243a5214}#status{position:absolute;z-index:2;top:24px;left:50%;transform:translateX(-50%);width:min(90%,480px);margin:0;padding:18px 22px;border:1px solid var(--line);border-radius:8px;background:white;font-size:14px;line-height:1.6;text-align:center}#status[hidden]{display:none}#status a{color:var(--accent)}
+@media(max-width:640px){.header-inner{padding:16px;gap:14px;flex-wrap:wrap}h1{font-size:20px}h1 span{font-size:13px}.skills{font-size:11px}nav{width:100%}.action{flex:1}.toolbar{padding:8px 12px;gap:6px}.document-label strong{display:none}.tools{gap:6px}#fit{padding:0 10px;font-size:12px}.pdfViewer{padding:4px 8px 24px;--page-margin:0 auto 12px}}
+</style>
+</head>
+<body>
+<div class="shell">
+<header><div class="header-inner"><div><h1>이재웅<span>데이터 엔지니어</span></h1><p class="skills">Python · SQL · Spark · Airflow · Databricks · Azure</p></div><nav aria-label="포트폴리오 파일"><a class="action" href="portfolio.pdf" target="_blank" rel="noopener">원본 열기 ↗</a><a class="action primary" href="portfolio.pdf" download="이재웅_포트폴리오.pdf">PDF 다운로드</a></nav></div></header>
+<div class="toolbar" role="group" aria-label="문서 보기 설정"><div class="document-label"><strong>포트폴리오</strong><span id="pageCount">문서 준비 중</span></div><div class="tools"><div class="zoom"><button id="zoomOut" aria-label="축소" disabled>−</button><output id="scale" aria-label="확대 비율">—</output><button id="zoomIn" aria-label="확대" disabled>+</button></div><button id="fit" disabled>너비 맞춤</button></div></div>
+<main aria-label="포트폴리오 미리보기"><div id="viewerContainer" tabindex="0" aria-label="PDF 문서. 위아래로 스크롤하여 읽기"><div id="viewer" class="pdfViewer"></div></div><p id="status" role="status">포트폴리오를 불러오고 있습니다.</p><noscript><p>미리보기에 JavaScript가 필요합니다. <a href="portfolio.pdf">PDF 원본 열기</a></p></noscript></main>
+</div>
+<script type="module" src="viewer.js"></script>
+</body>
+</html>
